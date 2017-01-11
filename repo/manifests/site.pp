@@ -26,7 +26,7 @@ if hiera('classes', false) {
 ### install latest docker
 
 class {'docker':
-  version => '1.9.1-0~trusty',
+  version => '1.12.5-0~debian-jessie',
 }
 
 # Find the other instances
