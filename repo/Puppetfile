@@ -9,5 +9,5 @@ mod 'tracywebtech-pip', '1.3.2'
 mod 'newrelic-nrsysmond',
   :git => "git://github.com/newrelic/puppet-nrsysmond.git"
 
-mod 'puppetlabs-apache', '1.11.1'
+mod 'puppetlabs-apache', '1.11.0'
 mod 'puppetlabs-vcsrepo'
