@@ -120,9 +120,9 @@ jenkins::plugin {
 }
 
 # required by ssh-agent
-jenkins::plugin {
-  'credentials': ;
-}
+#jenkins::plugin {
+#  'credentials': ;
+#}
 
 jenkins::plugin {
   'dashboard-view': ;
