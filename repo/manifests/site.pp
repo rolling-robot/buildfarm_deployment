@@ -26,7 +26,7 @@ if hiera('classes', false) {
 ### install latest docker
 
 class {'docker':
-  version => '1.12.5-0~debian-jessie',
+  version => '1.13.0-0~ubuntu-trusty',
 }
 
 # Find the other instances
@@ -333,6 +333,15 @@ vcsrepo { "/home/jenkins-slave/reprepro-updater":
   provider => git,
   source   => 'https://github.com/ros-infrastructure/reprepro-updater.git',
   revision => 'refactor',
+  user     => 'jenkins-slave',
+  require => User['jenkins-slave'],
+}
+
+vcsrepo {"/home/jenkins-slave/archlinux-reprepro":
+  ensure   => latest,
+  provider => git,
+  source   => 'https://github.com/rolling-robot/archlinux-reprepro.git',
+  revision => 'master',
   user     => 'jenkins-slave',
   require => User['jenkins-slave'],
 }
